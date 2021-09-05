@@ -19,7 +19,7 @@ public partial class Tool
 		if (continuous)
 		{
 			var particle = Particles.Create("particles/tool_hit.vpcf", hitPos);
-			particle.SetPosition(0, hitPos);
+			particle.SetPosition(1, hitPos);
 			particle.Destroy(false);
 		}
 		else

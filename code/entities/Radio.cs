@@ -2,7 +2,7 @@
 using System;
 
 [Library( "ent_radio", Title = "Portal Radio", Spawnable = true )]
-public partial class RadioEntity : Prop, IUse
+public partial class RadioEntity : PointLightEntity, IUse
 {
 
 	public bool Enable { get; set; } = false;
@@ -12,7 +12,7 @@ public partial class RadioEntity : Prop, IUse
 	{
 		base.Spawn();
 		CheckSnd();
-		SetModel("models/props/portal/radio_remade.vmdl");
+		SetModel( "models/props/portal/radio_remade.vmdl" );
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 	}
 
@@ -33,11 +33,14 @@ public partial class RadioEntity : Prop, IUse
 
 	public void CheckSnd()
 	{
-		if(Enable==true){
-			Enable=false;
-			RadioSnd = base.PlaySound("radioloop");
-		}else{
-			Enable=true;
+		if ( Enable == true )
+		{
+			Enable = false;
+			RadioSnd = base.PlaySound( "radioloop" );
+		}
+		else
+		{
+			Enable = true;
 			RadioSnd.Stop();
 		}
 	}
@@ -47,4 +50,5 @@ public partial class RadioEntity : Prop, IUse
 		RadioSnd.Stop();
 		base.OnDestroy();
 	}
+	
 }
