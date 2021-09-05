@@ -4,10 +4,11 @@
 	{
 		sounds = 
 		[
-			"sounds/hl2death.vsnd",
+			"sounds/whatsupgamers.vsnd",
+			"sounds/whatsupgamersbrad.vsnd",
 		]
-		UI = true
-		Volume = 0.8
+		UI = false
+		Volume = 0.3
 		VolumeRandom = 0.0
 		Pitch = 1.0
 		PitchRandom = 0.0

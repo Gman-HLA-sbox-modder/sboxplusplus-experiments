@@ -86,6 +86,7 @@ partial class SandboxPlayer : Player
 
 		Inventory.DropActive();
 		Inventory.DeleteContents();
+		PlaySound( "hl2death" );
 	}
 
 	public override void TakeDamage( DamageInfo info )
